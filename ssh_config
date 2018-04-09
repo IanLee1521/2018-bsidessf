@@ -1,11 +1,10 @@
-Host production_web
+Host db web
     User                root
-    HostName            10.0.2.30
     IdentityFile        ~/.ssh/production
 
 Host jenkins
     User                jenkins
-    Hostname            10.0.2.25
+    Hostname            10.0.0.30
     IdentityFile        ~/.ssh/builder
 
 Host aws
