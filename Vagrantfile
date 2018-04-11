@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
             # ssh-keygen -t rsa -N "" -f ~vagrant/.ssh/builder
             ssh-keygen -t rsa -N "Sup3rS3cr3t" -f ~vagrant/.ssh/aws
 
+            mkdir -p /vagrant/ssh_keys/
             cp ~vagrant/.ssh/*.pub /vagrant/ssh_keys/
 
             # Create Git Projects
