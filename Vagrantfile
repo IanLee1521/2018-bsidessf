@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
             # Set up /etc/hosts
             echo "10.0.0.20 db" >> /etc/hosts
             echo "10.0.0.30 web" >> /etc/hosts
+            echo "10.0.0.40 jenkins" >> /etc/hosts
 
             # Set up SSH
             cp /vagrant/ssh_config ~vagrant/.ssh/config
