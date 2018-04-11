@@ -38,6 +38,12 @@ Vagrant.configure("2") do |config|
             git clone https://github.com/django/django.git ~vagrant/projs/django
             git clone https://github.com/python/cpython.git ~vagrant/projs/python
             git init ~vagrant/projs/special_project
+            FILE="~vagrant/projs/special_project/super_secret_code.py"
+            echo "#! /usr/bin/env python" > $FILE
+            echo "" >> $FILE
+            echo "print('all the secrets!')" >> $FILE
+            echo "" >> $FILE
+            echo "import antigravity  # I can fly!" >> $FILE
 
             # Fix any wacky file ownership
             chown -R vagrant:vagrant ~vagrant
