@@ -2,11 +2,6 @@ Host db web
     User                root
     IdentityFile        ~/.ssh/production
 
-Host jenkins
-    User                jenkins
-    Hostname            10.0.0.30
-    IdentityFile        ~/.ssh/builder
-
 Host aws
     User                ec2-user
     Hostname            ec2-xx-xxx-xxx-xxx.us-west-1.compute.amazonaws.com
@@ -14,7 +9,4 @@ Host aws
 
 Host *
     ControlMaster       auto
-    ControlPath         ~/.ssh/%r@%h:%p
-    ControlPersist      120h
     IdentityFile        ~/.ssh/id_rsa
-    ForwardAgent        yes
